@@ -1,0 +1,31 @@
+{{#if erros}}
+    {{#each erros}}
+        <div class="alert alert-danger">{{texto}}</div>
+    {{/each}}
+{{/if}}
+
+<h3>Nova entrada</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/estoques/novo" method="POST">
+            <label for="quantidade">Quantidade</label>
+            <input class="form-control" type="number" name="quantidade" id="quantidade" placeholder="Quantidade do produto">
+            <label for="observacoes">Observacoes:</label><br>
+            <input class="form-control" type="text" name="observacoes" id="observacoes" placeholder="observacoes da entrada"><br>
+            <label for="dataV">Data de validade</label>
+            <input type="date" name="dataV" id="dataV" required> <br>  
+            <label for="produto" class="mt-4">Produto</label>
+            <select name="produto" class="form-select ">
+                {{#each produtos}}
+                    <option value="{{_id}}">{{nome}} : {{descricao}}</option>
+                {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </select>
+            <br>
+            <button type="submit" class="btn btn-success">Aicionar entrada</button>
+        </form>
+    </div>
+</div>
+
+

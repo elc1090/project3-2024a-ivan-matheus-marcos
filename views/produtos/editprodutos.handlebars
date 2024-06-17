@@ -1,0 +1,26 @@
+{{#if erros}}
+    {{#each erros}}
+        <div class="alert alert-danger">{{texto}}</div>
+    {{/each}}
+{{/if}}
+<h3>Editar produto</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/produtos/edit" method="POST" >
+                <input type="hidden" name="id" value="{{produto._id}}">
+            <label for="nome">Nome</label>
+                <input  class="form-control" type="text" name="nome" id="nome" placeholder="Nome da categoria" value="{{produto.nome}}">
+            <label for="descricao">Descrição: </label>
+                <input class="form-control" type="text" name="descricao" id="descricao" placeholder="" value="{{produto.descricao}}">
+            <label for="categoria" class="mt-1">Categoria original: {{produto.categoria.nome}}</label>
+            <select name="categoria" class="form-select" >
+                {{#each categorias}}
+                    <option value="{{_id}}">{{nome}}</option>
+                {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </select><br>
+            <button type="submit" class="btn btn-success">Editar produto</button>
+        </form>
+    </div>
+</div>

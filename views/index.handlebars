@@ -1,0 +1,16 @@
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Controle de estoques</h1>
+  {{!-- <a class="btn btn-primary btn-lg" href="/registro" role="button">Crie uma conta</a><br> --}}
+</div>
+<hr>
+<h2>Postagens recentes</h2>
+
+{{#if user}}   
+  <a class="nav-link active" href="/estoques">Entradas</a>  
+  <a class="nav-link active" href="/retiradas">Retiradas</a>      
+  <a class="nav-link active" href="/categorias">Categorias</a>    
+  <a class="nav-link active" href="/produtos">Produtos</a>  
+  <a class="nav-link active" href="/estatisticas">Estatísticas</a>  
+{{else}}  
+  <a class="nav-link active" href="/login">Faça login para usar</a>  
+{{/if}} 

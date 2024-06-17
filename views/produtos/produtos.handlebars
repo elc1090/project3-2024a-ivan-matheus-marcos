@@ -1,0 +1,26 @@
+<h2>Lista de produtos</h2>
+<hr>
+<a href="/produtos/add">
+    <button class="btn btn-success">Novo produto</button>
+</a>
+
+{{#each produtos}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>Nome: {{nome}}</h4>
+            <small>Descrição: {{descricao}}</small>   <br>         
+            {{!-- <small>Peso: {{peso}}</small><br> --}}
+            <small>Categoria: {{categoria.nome}}</small> <br>
+            <a href="/produtos/edit/{{_id}}" class="d-inline">
+                <button class="btn btn-success mt-2">Editar produto</button>
+            </a>           
+            <form action="/produtos/deletar" method="POST" class="d-inline">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2"> Deletar Produto</button>
+            </form>
+            
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-3">Nenhum produto registrado </h4>
+{{/each}}

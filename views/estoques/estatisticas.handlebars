@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas</title>
+</head>
+<body>
+    <h1>Estatísticas</h1>
+
+    <h2>Produtos em estoque</h2>
+    <h3>Quantidade de doações por Categoria</h3>
+    <ul>
+        {{#each quantidadePorCategoriaNoEstoque}}
+            <li>{{this.nome}}: {{this.quantidade}}</li>
+        {{/each}}
+    </ul>
+
+    <h3>Peso dos Produtos no Estoque</h3>
+    <ul>
+        {{#each quantidadePorProdutoNoEstoque}}
+            <li>{{this.nome}}: {{this.quantidade}}</li>
+        {{/each}}
+    </ul>
+
+    <h2>Produtos que sairam do estoque</h2>
+    <h3>Quantidade de doações por Categoria</h3>
+    <ul>
+        {{#each quantidadePorCategoriaForaEstoque}}
+            <li>{{this.nome}}: {{this.quantidade}}</li>
+        {{/each}}
+    </ul>
+
+    <h3>Peso dos Produtos doados por categoria</h3>
+    <ul>
+        {{#each quantidadePorProdutoForaEstoque}}
+            <li>{{this.nome}}: {{this.quantidade}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>
