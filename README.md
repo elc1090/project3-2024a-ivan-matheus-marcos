@@ -18,6 +18,7 @@ Acesso: https://estoque2024-492b6860c2a5.herokuapp.com/
 
 ### Desenvolvedores
 Marcos Noble, Ivan Maidana e Matheus de Almeida
+
 Curso: Ciência da Computação
 
 
