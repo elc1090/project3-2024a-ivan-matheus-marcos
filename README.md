@@ -24,8 +24,8 @@ Curso: Ciência da Computação
 
 ### Acesso como Administrador
 
-Para realizar retiradas parciais, e controle de acesso dos usuarios.
-Usuario: admin@admin
+Para realizar retiradas parciais, e controle de acesso dos usuarios.<br>
+Usuario: admin@admin <br>
 Senha: admin
 
 
