@@ -1,0 +1,20 @@
+{{#if erros}}
+    {{#each erros}}
+        <div class="alert alert-danger">{{texto}}</div>
+    {{/each}}
+{{/if}}
+<h3>Editar entrada</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/retiradas/retirarparcial" method="POST" >
+            <input type="hidden" name="id" value="{{estoque._id}}"> <br>
+            <label for="quantidade">Quantidade maxima: {{estoque.quantidade}}</label><br>
+            <input type="number" id="quantidade" name="quantidade" min="1" max="{{estoque.quantidade}}" required><br>            
+            <label for="observacoes">Observacoes: {{estoque.observacoes}}</label><br>
+            <label for="dataV">Data de validade original: {{estoque.dataV}} </label><br>
+            <label for="produto" class="mt-4">Produto original: {{estoque.produto.nome}}</label><br>
+            <button type="submit" class="btn btn-success">Retirar quantidade</button>
+        </form>
+        
+    </div>
+</div>

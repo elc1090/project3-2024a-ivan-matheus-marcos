@@ -1,0 +1,25 @@
+<h2>Lista de estoques</h2>
+<hr>
+<a href="/estoques/add">
+    <button class="btn btn-success d-inline">Nova entrada</button>
+</a>
+<a href="/retiradas">
+    <button class="btn btn-success d-inline">Ir para retiradas</button>
+</a>
+{{#each estoques}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>Produto: {{produto.nome}}</h4>
+            <small>Quantidade: {{quantidade}}</small> <br>
+            <small>Observacoes: {{observacoes}}</small> <br>
+            <small>Data de entrada: {{dataE}}</small> <br>
+            <small>Data de validade: {{dataV}}</small> <br>           
+            <form action="/retiradas/retirar" method="POST" class="d-inline">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-warning mt-2 ml-4">Retirar</button>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-3">Nenhum produto registrado</h4>
+{{/each}}

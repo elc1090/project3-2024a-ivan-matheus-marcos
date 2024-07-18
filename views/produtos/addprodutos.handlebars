@@ -9,14 +9,14 @@
     <div class="card-body">
         <form action="/produtos/novo" method="POST">
             <label for="nome">Nome</label>
-            <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome do produto">
+                <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome do produto" required>
             <label for="descricao">Descrição:</label>
-            <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Descrição do produto">
+                <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Descrição do produto" required>
             {{!-- <label for="peso">Peso:</label>
             <input class="form-control" type="number" name="peso" id="peso" placeholder="Peso do produto"> --}}
             <br>
             <label for="categoria">Categoria</label>
-            <select name="categoria" class="form-select">
+            <select name="categoria" class="form-select" required>
                 {{#each categorias}}
                     <option value="{{_id}}">{{nome}}</option>
                 {{else}}

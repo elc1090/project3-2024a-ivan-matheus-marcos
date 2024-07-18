@@ -1,16 +1,19 @@
-<div class="bg-light p-5 rounded-lg m-3">
-  <h1 class="display-4">Controle de estoques</h1>
-  {{!-- <a class="btn btn-primary btn-lg" href="/registro" role="button">Crie uma conta</a><br> --}}
-</div>
-<hr>
-<h2>Postagens recentes</h2>
 
-{{#if user}}   
-  <a class="nav-link active" href="/estoques">Entradas</a>  
-  <a class="nav-link active" href="/retiradas">Retiradas</a>      
-  <a class="nav-link active" href="/categorias">Categorias</a>    
-  <a class="nav-link active" href="/produtos">Produtos</a>  
-  <a class="nav-link active" href="/estatisticas">Estatísticas</a>  
+{{!-- <div class="bg-light p-5 rounded-lg m-3">
+  <img src="comida.png" alt="Controle de estoques" class="img-fluid">
+</div>
+<hr> --}}
+<h2 class="p-2">Opções</h2>
+
+{{#if user}}  
+<div>
+  <a class="p-2 nav-link active" href="/estoques">Entradas</a>  
+  <a class="p-2 nav-link active" href="/retiradas">Retiradas</a>      
+  <a class="p-2 nav-link active" href="/categorias">Categorias</a>    
+  <a class="p-2 nav-link active" href="/produtos">Produtos</a>  
+  <a class="p-2 nav-link active" href="/estatisticas">Estatísticas</a>  
+  <a class="p-2 nav-link active" href="/users">Usuários</a> 
+</div> 
 {{else}}  
   <a class="nav-link active" href="/login">Faça login para usar</a>  
 {{/if}} 

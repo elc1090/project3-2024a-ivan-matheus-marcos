@@ -3,15 +3,15 @@
 
 
 ![screen](./img/screen-inicial.PNG "Screenshot do projeto 1")
-![screen](./img/screen-estoque.PNG "Screenshot do projeto 2")
-![screen](./img/screen-categorias.PNG "Screenshot do projeto 3")
-![screen](./img/screen-lista-estoque.PNG "Screenshot do projeto 4")
-![screen](./img/screen-list-produtos.PNG "Screenshot do projeto 5")
-![screen](./img/screen-doacao.PNG "Screenshot do projeto 6")
+![screen](./img/screen-inicial-logado.PNG "Screenshot do projeto 2")
+![screen](./img/screen-lista-estoque.PNG "Screenshot do projeto 3")
+![screen](./img/screen-categorias.PNG "Screenshot do projeto 4")
+![screen](./img/screen-lista-produtos.PNG "Screenshot do projeto 5")
+![screen](./img/screen-lista-retirada.PNG "Screenshot do projeto 6")
 ![screen](./img/screen-estatistica.PNG "Screenshot do projeto 7")
 ![screen](./img/screen-login.PNG "Screenshot do projeto 8")
 ![screen](./img/screen-cadastro.PNG "Screenshot do projeto 9")
-![screen](./img/screen-deslogado.PNG "Screenshot do projeto 10")
+![screen](./img/screen-lista-usuario.PNG "Screenshot do projeto 10")
 
 
 Acesso: https://estoque2024-492b6860c2a5.herokuapp.com/
@@ -21,6 +21,12 @@ Acesso: https://estoque2024-492b6860c2a5.herokuapp.com/
 Marcos Noble, Ivan Maidana e Matheus de Almeida
 
 Curso: Ciência da Computação
+
+### Acesso como Administrador
+
+Para realizar retiradas parciais, e controle de acesso dos usuarios.
+Usuario: admin@admin
+Senha: admin
 
 
 ### Nosso produto

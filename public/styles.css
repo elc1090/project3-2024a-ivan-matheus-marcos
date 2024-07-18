@@ -1,0 +1,10 @@
+/* public/styles.css */
+.alert-success {
+    background-color: #f8d7da; /* Vermelho claro */
+    color: #721c24; /* Texto vermelho escuro */
+}
+
+.alert-danger {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Texto verde escuro */
+}

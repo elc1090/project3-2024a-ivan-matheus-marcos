@@ -9,13 +9,13 @@
         <form action="/estoques/edit" method="POST" >
             <input type="hidden" name="id" value="{{estoque._id}}">
             <label for="quantidade">Quantidade</label>
-                <input  class="form-control" type="number" name="quantidade" id="nome" placeholder="quantidade da entrada" value="{{estoque.quantidade}}">
+                <input  class="form-control" type="number" name="quantidade" id="nome" placeholder="quantidade da entrada" value="{{estoque.quantidade}}" required>
             <label for="observacoes">Observacoes: </label>
-                <input class="form-control" type="text" name="observacoes" id="observacoes" placeholder="Observações" value="{{estoque.observacoes}}">
+                <input class="form-control" type="text" name="observacoes" id="observacoes" placeholder="Observações" value="{{estoque.observacoes}}" required>
             <label for="dataV">Data de validade original: {{estoque.dataV}} </label>
-                <input class="form-control" type="date" name="dataV" id="dataV" value="{{estoque.dataV}}">
+                <input class="form-control" type="date" name="dataV" id="dataV" value="{{estoque.dataV}}" required> 
             <label for="produto" class="mt-4">Produto original: {{estoque.produto.nome}}</label>
-            <select name="produto" class="form-select ">
+            <select name="produto" class="form-select" required>
                 {{#each produtos}}
                     <option value="{{_id}}">{{nome}}</option>
                 {{else}}

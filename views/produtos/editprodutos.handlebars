@@ -7,13 +7,13 @@
 <div class="card">
     <div class="card-body">
         <form action="/produtos/edit" method="POST" >
-                <input type="hidden" name="id" value="{{produto._id}}">
+                <input type="hidden" name="id" value="{{produto._id}}" required>
             <label for="nome">Nome</label>
-                <input  class="form-control" type="text" name="nome" id="nome" placeholder="Nome da categoria" value="{{produto.nome}}">
+                <input  class="form-control" type="text" name="nome" id="nome" placeholder="Nome da categoria" value="{{produto.nome}}" required>
             <label for="descricao">Descrição: </label>
-                <input class="form-control" type="text" name="descricao" id="descricao" placeholder="" value="{{produto.descricao}}">
+                <input class="form-control" type="text" name="descricao" id="descricao" placeholder="" value="{{produto.descricao}}" required>
             <label for="categoria" class="mt-1">Categoria original: {{produto.categoria.nome}}</label>
-            <select name="categoria" class="form-select" >
+            <select name="categoria" class="form-select" required>
                 {{#each categorias}}
                     <option value="{{_id}}">{{nome}}</option>
                 {{else}}

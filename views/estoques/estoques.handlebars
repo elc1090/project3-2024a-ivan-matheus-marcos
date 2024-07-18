@@ -20,9 +20,17 @@
             
             <form action="/retiradas/retirar" method="POST" class="d-inline">
                 <input type="hidden" name="id" value="{{_id}}">
-                <button type="submit" class="btn btn-warning mt-2 ml-4">Retirar</button>
+                <button type="submit" class="btn btn-warning mt-2 ml-4">Retirar tudo</button>
             </form>
 
+            {{!-- <form action="/retiradas/retirarparcial" method="POST" class="d-inline">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-warning mt-2 ml-4">Retirada parcial</button>
+            </form> --}}
+            
+            <a href="/retiradas/retirarparcial/{{_id}}">
+                <button class="btn btn-success mt-2">Retirada parcial</button>
+            </a>
             <form action="/estoques/deletar" method="POST" class="d-inline">
                 <input type="hidden" name="id" value="{{_id}}">
                 <button type="submit" class="btn btn-danger mt-2 ml-4">Deletar entrada</button>

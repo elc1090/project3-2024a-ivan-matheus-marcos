@@ -1,21 +1,33 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Estoque</a>
+    <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/categorias">Categorias</a>
-        </li> 
-        {{#if user}} 
+        {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link active" href="/estoques">Entradas</a>  
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/retiradas">Retiradas</a>  
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/categorias">Categorias</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/produtos">Produtos</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/estatisticas">Estatísticas</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link active" href="/users">Usuários</a> 
+          </li>
           <li class="nav-item">
             <a class="nav-link active" href="/logout">Logout</a>
-          </li>      
+          </li>
         {{else}}
           <li class="nav-item">
             <a class="nav-link active" href="/login">Login</a>
@@ -23,8 +35,14 @@
           <li class="nav-item">
             <a class="nav-link active" href="/registro">Registro</a>
           </li>
-        {{/if}} 
-      </ul>      
+        {{/if}}
+      </ul>
+      {{#if user}}
+        <div class="navbar-text d-flex align-items-center">
+          <i class="bi bi-person-circle" style="font-size: 1.5em;"></i>
+          <span class="ms-2"> {{userInitials}}</span>
+        </div>
+      {{/if}}
     </div>
   </div>
 </nav>

@@ -9,11 +9,11 @@
     <div class="card-body">
         <form action="/estoques/novo" method="POST">
             <label for="quantidade">Quantidade</label>
-            <input class="form-control" type="number" name="quantidade" id="quantidade" placeholder="Quantidade do produto">
+                <input class="form-control" type="number" name="quantidade" id="quantidade" placeholder="Quantidade do produto " required>
             <label for="observacoes">Observacoes:</label><br>
-            <input class="form-control" type="text" name="observacoes" id="observacoes" placeholder="observacoes da entrada"><br>
+                <input class="form-control" type="text" name="observacoes" id="observacoes" placeholder="observacoes da entrada" required><br>
             <label for="dataV">Data de validade</label>
-            <input type="date" name="dataV" id="dataV" required> <br>  
+                <input type="date" name="dataV" id="dataV" required> <br>  
             <label for="produto" class="mt-4">Produto</label>
             <select name="produto" class="form-select ">
                 {{#each produtos}}

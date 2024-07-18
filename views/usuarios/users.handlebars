@@ -1,0 +1,22 @@
+<h2>Lista de Usuarios</h2>
+<hr>
+
+{{#each usuarios}}
+    <div class="card mt-4 {{getClassByAdminStatus eAdmin}}">
+        <div class="card-body">
+            <h4>Nome: {{nome}}</h4>
+            <small>E-mail: {{email}}</small>   <br>                     
+            <small>Admin status: {{eAdmin}}</small> <br>
+            <a href="/users/edit/{{_id}}" class="d-inline">
+                <button class="btn btn-success mt-2">Toggle admin status</button>
+            </a>           
+            <form action="/users/deletar" method="POST" class="d-inline">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2"> Deletar usuario</button>
+            </form>
+            
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-3">Nenhum usuario registrado</h4>
+{{/each}}
